@@ -34,12 +34,21 @@ class App extends Component {
     }
   }
 
+  removeLocalStorage = () => {
+    localStorage.removeItem('listTodos')
+    this.setState({todos: []})
+  }
+
   render() {
     const {todos} = this.state
     console.log(todos)
     return (
       <ContextValue.Provider
-        value={{listOfToDos: todos, addToStorage: this.addToLocalStorage}}
+        value={{
+          listOfToDos: todos,
+          removeLocalStorage: this.removeLocalStorage,
+          addToStorage: this.addToLocalStorage,
+        }}
       >
         <ToDoMainContainer />
       </ContextValue.Provider>

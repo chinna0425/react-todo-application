@@ -89,7 +89,7 @@ class ToDoMainContainer extends Component {
     return (
       <ContextValue.Consumer>
         {value => {
-          const {listOfToDos, addToStorage} = value
+          const {listOfToDos, addToStorage, removeLocalStorage} = value
           const progressItems = listOfToDos.filter(
             eachProgress => eachProgress.status === 'In Progress',
           )
@@ -99,6 +99,10 @@ class ToDoMainContainer extends Component {
           const completedItems = listOfToDos.filter(
             eachSuccess => eachSuccess.status === 'Completed',
           )
+
+          const removeData = () => {
+            removeLocalStorage()
+          }
 
           const onClickAddItem = () => {
             /* datas.preventDefault() */
@@ -135,7 +139,18 @@ class ToDoMainContainer extends Component {
                 </div>
               </div>
               <div className="right-side-main-container">
-                <h2 className="task-board-heading-style">Freelance Project</h2>
+                <div className="heading-button-style-container">
+                  <h2 className="task-board-heading-style">
+                    Freelance Project
+                  </h2>
+                  <button
+                    onClick={removeData}
+                    className="remove-all-button-style"
+                    type="button"
+                  >
+                    Clear All Todos
+                  </button>
+                </div>
                 <div className="right-todo-items-container">
                   <div className="right-todo-container-list">
                     <div className="right-todo-title">
