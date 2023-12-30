@@ -98,7 +98,8 @@
   border-width: 0px;
 }
 .remove-all-button-style:hover {
-  background-color: #ee46bc;
+  background-color: green;
+  color: #ffffff;
 }
 .right-todo-items-container {
   display: flex;
@@ -244,7 +245,7 @@
   font-size: 24px;
   font-weight: 500;
   font-family: 'Roboto';
-  color: #3fa1e3;
+  color: #000000;
   margin-top: 0px;
   margin-bottom: 10px;
 }
@@ -339,7 +340,7 @@
   font-size: 16px;
   font-weight: 500;
   font-family: 'Roboto';
-  color: #3fa1e3;
+  color: #000000;
   background-color: transparent;
   border-width: 0px;
 }

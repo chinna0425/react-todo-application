@@ -148,7 +148,7 @@ class ToDoMainContainer extends Component {
                     className="remove-all-button-style"
                     type="button"
                   >
-                    Clear All Todos
+                    Clear Todos
                   </button>
                 </div>
                 <div className="right-todo-items-container">
